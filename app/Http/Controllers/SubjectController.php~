@@ -1,0 +1,24 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\Subject;
+use App\Models\Note;
+
+class SubjectController extends Controller
+{
+    public function showNotes(Request $request)
+    {
+        $subject_id = $request->input('subject_id');
+
+        // Fetch notes related to the subject
+        $notes = Note::where('subject_id', $subject_id)->get();
+
+        // Fetch the subject details if needed
+        $subject = Subject::find($subject_id);
+
+        // Return the view with the notes and subject details
+        return view('notes.show', compact('notes', 'subject'));
+    }
+}

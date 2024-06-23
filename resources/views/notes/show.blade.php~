@@ -1,0 +1,18 @@
+<!-- resources/views/notes/show.blade.php -->
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <h1>Notes for {{ $subject->name }}</h1>
+    
+    @if($notes->isEmpty())
+        <p>No notes available for this subject.</p>
+    @else
+        <ul>
+            @foreach($notes as $note)
+                <li>{{ $note->content }}</li>
+            @endforeach
+        </ul>
+    @endif
+</div>
+@endsection

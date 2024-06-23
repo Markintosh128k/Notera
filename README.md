@@ -1,26 +1,66 @@
-# Notera
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-Notera is an open-source web application designed for sharing educational resources across a broad range of academic disciplines, including Art, Engineering, Chemistry, Informatics, Philosophy, and more. Developed using HTML and PHP, this platform stands out by embracing a completely open and free approach to education, unlike many existing note-sharing solutions that are proprietary and often require payment.
+<p align="center">
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-# Key Features:
+## About Laravel
 
-Cutting-edge Technology: Notera is being developed using the Laravel framework, a modern and robust PHP framework known for its elegant syntax, developer-friendly tools, and comprehensive feature set. Laravel offers a powerful foundation for building scalable and maintainable web applications. Key components include:
-Cutting-edge Technology: Developed using the Laravel framework, known for its elegant syntax and comprehensive features. Key components include:
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-    Eloquent ORM: A simple and beautiful ActiveRecord implementation for working with the database. Each database table has a corresponding "Model" that is used to interact with that table.
-    Blade Templating: Allows developers to easily create dynamic content with a clean and readable syntax. Blade views are compiled into plain PHP code and cached until they are modified, ensuring minimal overhead for your application.
-    Artisan CLI: Provides a number of helpful commands for developing your application, such as database migrations, seeding, and running automated tests.
-    Middleware: Provides a convenient mechanism for filtering HTTP requests entering your application. Middleware can be used to authenticate users or log requests.
-    MVC Architecture: Follows the Model-View-Controller architecture, which helps in separating the logic of the application from the presentation layer, making the codebase more organized and easier to manage.
-    Security: Offers built-in protection against common web vulnerabilities, such as SQL injection, cross-site request forgery (CSRF), and cross-site scripting (XSS). The authentication and authorization systems are robust and easy to implement.
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Completely Free: Notera is committed to the philosophy that knowledge should be free and accessible to all. It is a resource available at no cost for students, educators, and lifelong learners alike.
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-Open Source: The open-source nature of Notera means that anyone can contribute to its development, promoting a collaborative and transparent approach to building educational tools.
+## Learning Laravel
 
-PDF Sharing: Users can upload and download notes in PDF format, ensuring universal accessibility and ease of use across all devices.
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-Wide Subject Range: Whether you're delving into the depths of philosophy or exploring the intricacies of engineering, Notera caters to a diverse range of fields.
-# Why Notera?
+You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-While there are numerous platforms for sharing educational materials, many are gated communities with paywalls or are not open-source, limiting user freedom and collaboration. Notera breaks down these barriers, providing a platform for those who believe in unrestricted access to education and the free exchange of knowledge. This project is for everyone who agrees that culture and education should be free of charge and always available to everyone, everywhere.
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+
+## Laravel Sponsors
+
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+
+### Premium Partners
+
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[WebReinvent](https://webreinvent.com/)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
+- **[Jump24](https://jump24.co.uk)**
+- **[Redberry](https://redberry.international/laravel/)**
+- **[Active Logic](https://activelogic.com)**
+- **[byte5](https://byte5.de)**
+- **[OP.GG](https://op.gg)**
+
+## Contributing
+
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+
+## Code of Conduct
+
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+
+## Security Vulnerabilities
+
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+
+## License
+
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

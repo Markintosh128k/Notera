@@ -1,0 +1,43 @@
+@extends('layouts.app')
+
+@section('content')
+    <div class="container">
+        <h1>{{ $user->name }}'s dashboard</h1>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Notes Uploaded</h5>
+                        <p class="card-text">{{ $totalNotes }}</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Downloads</h5>
+                        <p class="card-text">{{ $totalDownloads }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	
+
+        <h3 class="mt-4">Notes per Subject</h3>
+        <div class="row">
+            @foreach($notesPerSubject as $note)
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $note->subject->name }}</h5>
+                            <p class="card-text">{{ $note->total }} notes</p>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+@endsection
