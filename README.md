@@ -1,7 +1,6 @@
-<p align="center"><a href="https://notera.com" target="_blank"><img src="https://example.com/notera-logo.svg" width="400" alt="Notera Logo"></a></p>
+<p align="center"><a href="" target="_blank"><img src="https://ibb.co/RgGmN5L" width="400" alt="Notera Logo"></a></p>
 
 <p align="center">
-<a href="https://github.com/Markintosh128k/Notera/actions"><img src="https://github.com/Markintosh128k/Notera/workflows/tests/badge.svg" alt="Build Status"></a>
 <a href="https://packagist.org/packages/markintosh128k/notera"><img src="https://img.shields.io/packagist/dt/markintosh128k/notera" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/markintosh128k/notera"><img src="https://img.shields.io/packagist/v/markintosh128k/notera" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/markintosh128k/notera"><img src="https://img.shields.io/packagist/l/markintosh128k/notera" alt="License"></a>
