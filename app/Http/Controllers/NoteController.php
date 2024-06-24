@@ -55,4 +55,9 @@ class NoteController extends Controller
         return redirect()->route('account.dashboard')
                          ->with('delete-ok', 'Note deleted successfully.');
     }
+
+    public function describe(Note $note)
+    {
+        return view('notes.describe', compact('note'));
+    }
 }

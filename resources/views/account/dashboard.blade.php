@@ -27,8 +27,9 @@
                         <td>{{ $note->subject->name }}</td>
                         <td>{{ $note->download_count }}</td>
                         <td>
-                            <form action="{{ url('/notes/' . $note->id) }}" method="post">
+                            <form action="{{ route('notes.destroy', $note) }}" method="post">
                                 @csrf
+                                @method('DELETE')
                                 <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                             </form>
                         </td>

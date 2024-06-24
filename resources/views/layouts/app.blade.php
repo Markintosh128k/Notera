@@ -31,10 +31,17 @@
 			<!-- Left Side Of Navbar -->
 			<ul class="navbar-nav me-auto">
 
-			</ul>
+
+
+            </ul>
 
 			<!-- Right Side Of Navbar -->
 			<ul class="navbar-nav ms-auto">
+
+                <form class="form-inline my-2 my-lg-0" action="{{ route('search') }}" method="POST">
+                    @csrf
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" name="search" onkeypress="if (event.keyCode == 13) { this.form.submit(); }">
+                </form>
                             <!-- Authentication Links -->
                             @guest
                             @if (Route::has('login'))

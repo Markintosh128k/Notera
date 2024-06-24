@@ -42,4 +42,12 @@ class UserController extends Controller
 
         return view('account.dashboard', compact('user', 'totalNotes', 'notesPerSubject', 'totalDownloads', 'notesPerDay', 'subjects'));
     }
+
+    public function settings()
+    {
+        $user = Auth::user();
+
+        return view('account.settings', compact('user'));
+
+    }
 }

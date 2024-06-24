@@ -25,4 +25,16 @@ class SubjectController extends Controller
         // Return the view with the notes and subject details
         return view('notes.show', compact('notes', 'subject'));
     }
+
+    public function searchNotes(Request $request)
+    {
+        $search = $request->input('search');
+
+        $notes = Note::query()
+            -> where ('title', 'LIKE', "%{$search}%")
+            -> get();
+
+        return view('notes.show', compact('notes', 'search'));
+
+    }
 }

@@ -21,4 +21,6 @@ Route::post('/notes', [NoteController::class, 'store'])->name('notes.store')->mi
 
 Route::get('/dashboard', [UserController::class, 'dashboard'])->name('account.dashboard')->middleware('auth');
 
-Route::post('/notes/{note}', [NoteController::class, 'destroy'])->name('notes.destroy')->middleware('auth');
+Route::delete('/notes/{note}', [NoteController::class, 'destroy'])->name('notes.destroy')->middleware('auth');
+Route::get('/notes/{note}', [NoteController::class, 'describe'])->name('notes.describe')->middleware('auth');
+Route::post('/search', [SubjectController::class, 'searchNotes'])->name('search')->middleware('auth');
