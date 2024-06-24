@@ -23,7 +23,7 @@
             <tbody>
                 @foreach($totalNotes as $note)
                     <tr>
-                        <td>{{ $note->title }}</td>
+                        <td><a href="{{ route('notes.describe', $note->id) }}">{{ $note->title }}</a></td>
                         <td>{{ $note->subject->name }}</td>
                         <td>{{ $note->download_count }}</td>
                         <td>

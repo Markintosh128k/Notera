@@ -33,4 +33,8 @@ class Note extends Model
     {
         return $this->reviews()->avg('rating');
     }
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
 }

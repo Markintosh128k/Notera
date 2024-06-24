@@ -58,6 +58,7 @@ class NoteController extends Controller
 
     public function describe(Note $note)
     {
+        $note->load('reviews.user'); // Eager load the reviews and their associated users
         return view('notes.describe', compact('note'));
     }
 }

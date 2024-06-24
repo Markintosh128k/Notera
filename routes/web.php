@@ -5,6 +5,8 @@ use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\NoteController;
 use App\Http\Controllers\UserController;
 use App\Models\User;
+use App\Http\Controllers\ReviewController; // Import ReviewController
+use App\Models\Review;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -24,3 +26,8 @@ Route::get('/dashboard', [UserController::class, 'dashboard'])->name('account.da
 Route::delete('/notes/{note}', [NoteController::class, 'destroy'])->name('notes.destroy')->middleware('auth');
 Route::get('/notes/{note}', [NoteController::class, 'describe'])->name('notes.describe')->middleware('auth');
 Route::post('/search', [SubjectController::class, 'searchNotes'])->name('search')->middleware('auth');
+
+
+
+// ... other routes
+Route::post('/notes/{note}/reviews', [ReviewController::class, 'store'])->name('notes.reviews.store');
