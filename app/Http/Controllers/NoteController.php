@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Subject;
 use App\Models\Note;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 
 class NoteController extends Controller
 {
@@ -45,11 +46,13 @@ class NoteController extends Controller
 
     public function destroy(Note $note)
     {
-        $this->authorize('delete', $note);
+        if (! Gate::allows('delete-note', $note)) {
+            abort(403);
+        }
 
         $note->delete();
 
         return redirect()->route('account.dashboard')
-                         ->with('success', 'Note deleted successfully.');
+                         ->with('delete-ok', 'Note deleted successfully.');
     }
 }

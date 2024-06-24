@@ -20,3 +20,5 @@ Route::get('/notes/create', [NoteController::class, 'create'])->name('notes.crea
 Route::post('/notes', [NoteController::class, 'store'])->name('notes.store')->middleware('auth');
 
 Route::get('/dashboard', [UserController::class, 'dashboard'])->name('account.dashboard')->middleware('auth');
+
+Route::post('/notes/{note}', [NoteController::class, 'destroy'])->name('notes.destroy')->middleware('auth');
