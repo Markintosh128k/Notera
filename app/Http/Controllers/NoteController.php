@@ -44,6 +44,7 @@ class NoteController extends Controller
             ->with('success', 'Note has been uploaded successfully.');
     }
 
+
     public function destroy(Note $note)
     {
         if (! Gate::allows('delete-note', $note)) {

@@ -11,16 +11,19 @@
             </div>
         @endif
         <h3 class="mt-4">All Notes</h3>
-        <table class="table table-striped">
-            <thead>
+        @if($totalNotes->isEmpty())
+            <div class="alert alert-warning text-center">No notes found</div>
+        @else
+            <table class="table table-striped">
+                <thead>
                 <tr>
                     <th>Title</th>
                     <th>Subject</th>
                     <th>Downloads</th>
                     <th>Actions</th>
                 </tr>
-            </thead>
-            <tbody>
+                </thead>
+                <tbody>
                 @foreach($totalNotes as $note)
                     <tr>
                         <td><a href="{{ route('notes.describe', $note->id) }}">{{ $note->title }}</a></td>
@@ -35,7 +38,8 @@
                         </td>
                     </tr>
                 @endforeach
-            </tbody>
+                </tbody>
+            </table>
+        @endif
     </div>
 @endsection
-

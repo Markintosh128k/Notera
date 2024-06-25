@@ -21,9 +21,7 @@ class ReviewController extends Controller
         $review = new Review();
         $review->rating = $validatedData['rating'];
         $review->title = $validatedData['title'];
-        if (array_key_exists('description', $validatedData)) {
-            $review->description = $validatedData['description'];
-        }
+        $review->description = $validatedData['description'] ?? null; // Ensure description is nullable
         $review->user_id = auth()->id(); // Assuming you are using authentication
 
         // Save the review for the current note
@@ -33,4 +31,26 @@ class ReviewController extends Controller
         return redirect()->route('notes.describe', ['note' => $note->id])
             ->with('success', 'Review added successfully.');
     }
+
+    public function update(Request $request, Note $note, Review $review)
+    {
+        // Check if the current user is authorized to update the review
+        if ($review->user_id !== auth()->id()) {
+            abort(403, 'Unauthorized action.');
+        }
+
+        // Update the attributes of the existing $review object
+        $review->rating = $request->input('rating');
+        $review->title = $request->input('title');
+        $review->description = $request->input('description');
+
+        // Save the updated review to the database
+        $review->save();
+
+        // Redirect back with a success message
+        return redirect()->route('notes.describe', ['note' => $review->note_id])
+            ->with('success', 'Review updated successfully.');
+    }
+
+    
 }
