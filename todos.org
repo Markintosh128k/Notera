@@ -1,0 +1,8 @@
+* TODO Change the Submit/Update review button. Adjust layout
+* TODO Implement review average rating
+* TODO Implement downloads number 
+* TODO Implement email confirmation/reset
+* TODO Add functionality to view another user's uploaded notes
+* TODO Rework the comment section
+* TODO Implement PDF image preview in subject notes list
+* TODO Add a footer

@@ -130,5 +130,4 @@
 @section('scripts')
     <!-- Bootstrap Bundle with Popper -->
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-    <!-- Optional: Add your own JavaScript logic here -->
 @endsection
