@@ -40,7 +40,9 @@
 
 @section('scripts')
     <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
-    <script>
+  <script>
+    // Ensure the note object is set and the path is available
+    @if (isset($note) && isset($note->path))
         // URL of the PDF file
         const pdfUrl = "{{ asset('storage/' . $note->path) }}";
 
@@ -90,5 +92,8 @@
 
         // Execute function to render PDF when DOM is loaded
         document.addEventListener('DOMContentLoaded', renderPdf);
-    </script>
+    @endif
+</script>
+
+
 @endsection

@@ -19,9 +19,6 @@ class DatabaseSeeder extends Seeder
             SubjectSeeder::class,
         ]);
 
-   	$this->call([
-            NotesTableSeeder::class,
-        ]);
 
         User::factory()->create([
             'name' => 'Test User',
